@@ -12,7 +12,7 @@ export default function Header() {
           <div className="flex items-center">
             <Menu className="h-6 w-6 text-gray-500 mr-4 cursor-pointer" />
             <Link to="/" className="text-2xl font-bold text-gray-900">
-              Classifieds
+              AmesList
             </Link>
           </div>
           
