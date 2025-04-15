@@ -1,0 +1,20 @@
+runtime: python39  # or python311 if needed
+
+entrypoint: gunicorn -b :$PORT main:app
+
+env_variables:
+  DB_USER: "root"
+  DB_PASS: ""
+  DB_NAME: "project4_db"
+  DB_CONNECTION_NAME: "project-4-455717:us-central1:project4"
+  GOOGLE_APPLICATION_CREDENTIALS: "project-4-455717-d9069f0670bb.json"
+
+handlers:
+- url: /media
+  static_dir: media
+
+- url: /.*
+  script: auto
+
+beta_settings:
+  cloud_sql_instances: project-4-455717:us-central1:project4
