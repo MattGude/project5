@@ -5,9 +5,9 @@ entrypoint: gunicorn -b :$PORT main:app
 env_variables:
   DB_USER: "root"
   DB_PASS: ""
-  DB_NAME: "project4_db"
-  DB_CONNECTION_NAME: "project-4-455717:us-central1:project4"
-  GOOGLE_APPLICATION_CREDENTIALS: "project-4-455717-d9069f0670bb.json"
+  DB_NAME: "project5-db"
+  DB_CONNECTION_NAME: "project5-456917:us-central1:project5-db"
+  GOOGLE_APPLICATION_CREDENTIALS: "project5-456917-a2e052c206fe.json"
 
 handlers:
 - url: /media
@@ -17,4 +17,4 @@ handlers:
   script: auto
 
 beta_settings:
-  cloud_sql_instances: project-4-455717:us-central1:project4
+  cloud_sql_instances: project5-456917:us-central1:project5-db
