@@ -2,4 +2,4 @@
 venv/
 
 # no GCP credentials
-*.json
+project5-456917-a2e052c206fe.json
