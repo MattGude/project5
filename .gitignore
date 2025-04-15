@@ -1,1 +1,5 @@
+# no venv
 venv/
+
+# no GCP credentials
+*.json
