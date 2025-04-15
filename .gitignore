@@ -1,5 +1,10 @@
-# no venv
-venv/
-
 # no GCP credentials
 project5-456917-a2e052c206fe.json
+
+# node_modules
+node_modules/
+
+#supabase
+supabase/
+
+.DS_Store

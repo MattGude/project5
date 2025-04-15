@@ -17,3 +17,27 @@
 __pycache__/
 # Ignored by the build system
 /setup.cfg
+
+# Dev folders to ignore
+supabase/
+node_modules/
+src/
+.vite/
+
+# build artifcats not needed
+*.log
+*.ts
+*.jsx
+*.tsx
+*.map
+
+# Config files
+eslint.config.js
+vite.config.ts
+tsconfig*.json
+postcss.config.js
+tailwind.config.js
+
+# Lock & package files
+package.json
+package-lock.json

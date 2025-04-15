@@ -1,20 +1,13 @@
-runtime: python39  # or python311 if needed
-
-entrypoint: gunicorn -b :$PORT main:app
-
-env_variables:
-  DB_USER: "root"
-  DB_PASS: ""
-  DB_NAME: "project5-db"
-  DB_CONNECTION_NAME: "project5-456917:us-central1:project5-db"
-  GOOGLE_APPLICATION_CREDENTIALS: "project5-456917-a2e052c206fe.json"
+runtime: nodejs20
+instance_class: F1
 
 handlers:
-- url: /media
-  static_dir: media
+# Serve static assets (JS, CSS, images, etc.)
+- url: /(.+\.(js|css|png|jpg|jpeg|gif|svg|ico|woff2?|ttf|eot|otf|map))$
+  static_files: dist/\1
+  upload: dist/.*
 
+# Fallback to index.html for React Router
 - url: /.*
-  script: auto
-
-beta_settings:
-  cloud_sql_instances: project5-456917:us-central1:project5-db
+  static_files: dist/index.html
+  upload: dist/index.html
