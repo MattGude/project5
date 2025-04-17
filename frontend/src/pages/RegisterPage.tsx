@@ -13,7 +13,7 @@ export default function RegisterPage() {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/');
+      navigate('/login');
     } catch (err) {
       setError('Error creating account');
     }

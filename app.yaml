@@ -1,13 +1,12 @@
 runtime: nodejs20
 instance_class: F1
 
-handlers:
-# Serve static assets (JS, CSS, images, etc.)
-- url: /(.+\.(js|css|png|jpg|jpeg|gif|svg|ico|woff2?|ttf|eot|otf|map))$
-  static_files: dist/\1
-  upload: dist/.*
+env_variables:
+  NODE_ENV: 'production'
+  DB_HOST: '/cloudsql/project5-456917:us-central1:project5-db'
+  DB_USER: 'root'
+  DB_PASSWORD: ''
+  DB_NAME: 'ameslist_db'
 
-# Fallback to index.html for React Router
-- url: /.*
-  static_files: dist/index.html
-  upload: dist/index.html
+beta_settings:
+  cloud_sql_instances: project5-456917:us-central1:project5-db

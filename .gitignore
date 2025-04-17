@@ -8,3 +8,5 @@ node_modules/
 supabase/
 
 .DS_Store
+
+.env
