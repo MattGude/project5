@@ -1,6 +1,6 @@
 import { Menu, Search, PlusCircle, LogIn, LogOut, UserPlus } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/AuthContext';
 
 export default function Header() {
   const { user, signOut } = useAuth();

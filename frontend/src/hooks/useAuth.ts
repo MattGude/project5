@@ -17,7 +17,7 @@ export function useAuth() {
       }
     }
     setLoading(false);
-  }, []);
+  }, []);  
 
   const signIn = async (username: string, password: string) => {
     const res = await fetch('/api/login', {

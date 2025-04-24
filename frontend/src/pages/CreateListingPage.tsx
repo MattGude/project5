@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../hooks/AuthContext';
 import { categories } from '../types';
-import { mockDb } from '../lib/mockDb';
 
 export default function CreateListingPage() {
   const { category, subcategory } = useParams();
@@ -69,7 +68,7 @@ export default function CreateListingPage() {
           user_id: user.id
         })
       });
-      
+      navigate(`/category/${category}/${subcategory}`);
   };
 
   return (
