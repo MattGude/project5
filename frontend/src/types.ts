@@ -70,7 +70,7 @@ export const categories: CategoryType[] = [
         attributes: ['Type', 'Square Feet', 'Price', 'Available Date', 'Zoning', 'Description', 'Address', 'Phone']
       },
       {
-        name: 'Parking/Storage',
+        name: 'Parking and Storage',
         attributes: ['Type', 'Size', 'Price', 'Security', 'Access Hours', 'Description', 'Address', 'Phone']
       }
     ]
